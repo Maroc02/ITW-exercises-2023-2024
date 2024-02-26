@@ -258,6 +258,6 @@ tbody td {
 
 #subject li::before {
   padding: 0 0.5rem;
-  content: "\2713";
+  content: "\2714";
   color: var(--light_brown_dark_bg);
 }
