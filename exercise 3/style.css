@@ -1,0 +1,263 @@
+/* ********** Exercise 3 ********** */
+/*  Author:  Marek Čupr (xcuprm01)  */
+/*  Subject: ITW - Web Design       */
+/*  Date:    25. 2. 2024            */
+/* ******************************** */
+
+:root {
+  /* Colors */
+  --light_gray: #e3e3e3;
+  --gray: #656565;
+  --light_brown_light_bg: #b15e23;
+  --light_brown_light_bg_2: #bb784b;
+  --light_brown_dark_bg: #d5a17c;
+  --dark_brown: #3c1f0a;
+  --prominent_color: black;
+  --prominent_inverse_color: white;
+
+  /* Fonts */
+  --main_font_family: "Arial", sans-serif;
+  --sub_font_family: "Helvetica", sans-serif;
+}
+
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--main_font_family);
+}
+
+a,
+li {
+  list-style-type: none;
+  text-decoration: none;
+  color: var(--prominent_inverse_color);
+}
+
+h2 {
+  color: var(--light_brown_light_bg);
+}
+
+p,
+span,
+table {
+  color: var(--gray);
+}
+
+header,
+nav,
+section,
+footer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.horizontal-line {
+  margin: 0.5rem 0;
+  width: 100%;
+  height: 2px;
+  border-top: 2.25px dotted var(--light_brown_light_bg_2);
+}
+
+/* Header */
+#header-section {
+  background-color: var(--dark_brown);
+  padding-top: 1.5rem;
+}
+
+#header-section header h1 {
+  display: flex;
+  gap: 0.2rem;
+  flex-direction: column;
+  color: var(--light_brown_light_bg_2);
+  font-size: 1.5rem;
+}
+
+#header-section header h1 a {
+  font-size: 3.75rem;
+  font-family: var(--sub_font_family);
+  font-style: italic;
+  color: var(--prominent_inverse_color);
+}
+
+/* Navigation */
+#header-section nav ul {
+  margin-top: 3rem;
+  display: flex;
+  gap: 2rem;
+}
+
+#header-section nav ul li {
+  position: relative;
+}
+
+#header-section nav ul li::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  background-image: url("/assets/menu_bullet.gif");
+  display: inline-block;
+  width: 17px;
+  height: 11px;
+  transition: opacity 0.3s ease;
+}
+
+#header-section nav ul li:hover::after {
+  opacity: 1;
+}
+
+/* About */
+#about-wrapper {
+  background: linear-gradient(
+    to bottom,
+    var(--prominent_inverse_color),
+    var(--light_gray)
+  );
+  padding: 2rem 0 4rem 0;
+}
+
+#about h2 {
+  margin-bottom: 1rem;
+}
+
+#about p {
+  color: var(--gray);
+  margin-bottom: 1rem;
+}
+
+/* Main */
+#main-wrapper {
+  padding-bottom: 2rem;
+}
+
+/* Lectures */
+#lectures {
+  margin-top: 1.5rem;
+}
+
+#lectures div {
+  margin-top: 0.5rem;
+}
+
+#lectures a {
+  color: var(--prominent_color);
+  font-weight: bold;
+}
+
+/* Results */
+#results {
+  padding: 1.5rem 0 0.5rem 0;
+}
+
+#results h2 {
+  margin-bottom: 0.35rem;
+}
+
+/* Table */
+table {
+  width: 60%;
+  border: 4px solid var(--prominent_color);
+}
+
+thead {
+  background-color: var(--light_brown_dark_bg);
+}
+
+thead th {
+  border-top: 3px dotted var(--prominent_color);
+  border-left: 3px dotted var(--prominent_color);
+  border-right: 3px solid var(--prominent_color);
+  border-bottom: 3px solid var(--prominent_color);
+}
+
+tbody {
+  color: var(--prominent_color);
+}
+
+tbody tr td:nth-child(1) {
+  text-align: left;
+}
+
+tbody td {
+  text-align: center;
+  border-top: 2px solid var(--prominent_color);
+  border-bottom: 1px solid var(--gray);
+}
+
+/* Exercises */
+#exercises h2 {
+  color: var(--light_brown_light_bg);
+  margin-bottom: 1.5rem;
+}
+
+#exercises a {
+  color: var(--prominent_color);
+  font-weight: bold;
+}
+
+#exercises div,
+#exercises img {
+  margin-top: 1rem;
+}
+
+#exercises span {
+  padding-left: 1.5rem;
+}
+
+/* Footer */
+.footer-wrapper {
+  background-color: var(--dark_brown);
+  padding-top: 0.75rem;
+  color: white;
+}
+
+/* Contact us */
+#contact h2 {
+  margin-top: 1rem;
+  padding-bottom: 1.25rem;
+  color: var(--prominent_inverse_color);
+}
+
+#contact a {
+  color: var(--light_brown_light_bg_2);
+}
+
+.person-info {
+  display: flex;
+  width: 25%;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+/* Related subjects */
+#subject {
+  padding-top: 0.75rem;
+}
+
+#subject h2 {
+  margin-top: 0.5rem;
+  color: var(--prominent_inverse_color);
+}
+
+#subject li:nth-child(1) {
+  padding-top: 0.5rem;
+}
+
+#subject li {
+  padding: 0.25rem 0;
+}
+
+#subject li a {
+  color: var(--light_brown_dark_bg);
+}
+
+#subject li::before {
+  padding: 0 0.5rem;
+  content: "\2713";
+  color: var(--light_brown_dark_bg);
+}
