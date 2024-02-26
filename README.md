@@ -8,5 +8,5 @@ Exercise 4 – x/2\
 Exercise 5 – x/2\
 Exercise 6 – x/2
 
-Points in total  – xx/10\
+Points in total  – xx/10
 
