@@ -2,4 +2,4 @@
 
 Points:
 
-Exercise 3 – x/2
+Exercise 3 – 2/2
