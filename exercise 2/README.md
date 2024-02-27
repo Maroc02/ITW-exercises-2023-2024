@@ -3,4 +3,3 @@
 Points:
 
 Exercise 2 – 2/2
-
